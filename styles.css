@@ -1,0 +1,129 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and general layout */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+select {
+  margin-left: 20px;
+  padding: 5px 10px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+/* Product Grid */
+#productContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin-top: 30px;
+}
+
+/* Product card styling */
+.productCard {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
+  overflow: hidden;
+  transform: translateY(30px);
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+  padding: 15px;
+}
+
+.productCard img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.productCard .details {
+  padding: 15px 0;
+  text-align: left;
+}
+
+.productCard .details h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.productCard .details p {
+  font-size: 1em;
+  color: #777;
+}
+
+.productCard .details .price {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+.productCard .details button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.productCard .details button:hover {
+  background-color: #e64a19;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.productCard:nth-child(even) {
+  animation-delay: 0.2s;
+}
+
+.productCard:nth-child(odd) {
+  animation-delay: 0.4s;
+}
